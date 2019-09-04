@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -15,9 +14,131 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link rel="stylesheet" href="app/css/main.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.17.0/lazyload.min.js"></script>
-  <title>iNTUition 2018</title>
+  <title>iNTUition 2019</title>
+<style>
+
+
+#countdown{
+	width: 465px;
+	height: 125px;
+	text-align: center;
+	background: #222;
+	background-image: -webkit-linear-gradient(top, #222, #333, #333, #222); 
+	background-image:    -moz-linear-gradient(top, #222, #333, #333, #222);
+	background-image:     -ms-linear-gradient(top, #222, #333, #333, #222);
+	background-image:      -o-linear-gradient(top, #222, #333, #333, #222);
+	border: 1px solid #111;
+	border-radius: 5px;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+	margin: auto;
+	padding: 24px 0;
+	position: relative;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
+
+#countdown:before{
+	content:"";
+	width: 8px;
+	height: 65px;
+	background: #444;
+	background-image: -webkit-linear-gradient(top, #555, #444, #444, #555); 
+	background-image:    -moz-linear-gradient(top, #555, #444, #444, #555);
+	background-image:     -ms-linear-gradient(top, #555, #444, #444, #555);
+	background-image:      -o-linear-gradient(top, #555, #444, #444, #555);
+	border: 1px solid #111;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	display: block;
+	position: absolute;
+	top: 25px; left: -10px;
+}
+
+#countdown:after{
+	content:"";
+	width: 8px;
+	height: 65px;
+	background: #444;
+	background-image: -webkit-linear-gradient(top, #555, #444, #444, #555); 
+	background-image:    -moz-linear-gradient(top, #555, #444, #444, #555);
+	background-image:     -ms-linear-gradient(top, #555, #444, #444, #555);
+	background-image:      -o-linear-gradient(top, #555, #444, #444, #555);
+	border: 1px solid #111;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	display: block;
+	position: absolute;
+	top: 25px; right: -10px;
+}
+
+#countdown #tiles{
+	position: relative;
+	z-index: 1;
+}
+
+#countdown #tiles > span{
+	width: 90px;
+	max-width: 92px;
+	font: bold 48px 'Droid Sans', Arial, sans-serif;
+	text-align: center;
+	color: #111;
+	background-color: #ddd;
+	background-image: -webkit-linear-gradient(top, #bbb, #eee); 
+	background-image:    -moz-linear-gradient(top, #bbb, #eee);
+	background-image:     -ms-linear-gradient(top, #bbb, #eee);
+	background-image:      -o-linear-gradient(top, #bbb, #eee);
+	border-top: 1px solid #fff;
+	border-radius: 3px;
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
+	margin: 0 7px;
+	padding: 18px 0;
+	display: inline-block;
+	position: relative;
+}
+
+#countdown #tiles > span:before{
+	content:"";
+	width: 80%;
+	height: 11px;
+	background: #111;
+	display: block;
+	padding: 0 3px;
+	position: absolute;
+	top: 41%; left: -3px;
+	z-index: -1;
+}
+
+#countdown #tiles > span:after{
+	content:"";
+	width: 100%;
+	height: 1px;
+	background: #eee;
+	border-top: 1px solid #333;
+	display: block;
+	position: absolute;
+	top: 48%; left: 0;
+}
+
+#countdown .labels{
+	width: 100%;
+	height: 25px;
+	text-align: center;
+	position: absolute;
+	bottom: 100px;
+}
+
+#countdown .labels li{
+	width: 100px;
+	font: bold 15px 'Droid Sans', Arial, sans-serif;
+	color: #f47321;
+	text-shadow: 1px 1px 0px #000;
+	text-align: center;
+	text-transform: uppercase;
+	display: inline-block;
+}
+
+
+</style>
 </head>
 
 <body>
@@ -35,9 +156,6 @@
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Photos">Photos</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#faq">FAQs</a>
           </li>
           <li class="nav-item">
@@ -46,7 +164,12 @@
           <li class="nav-item">
             <a class="nav-link" href="#schedule">Schedule</a>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link" href="#prizes">Prizes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sponsors">Sponsors</a>
+          </li>
         </ul>
       </form>
     </div>
@@ -54,46 +177,56 @@
   <div class="jumbotron text-center vertical-center">
     <h1 class="main-title animated fadeIn">
       <img src="app/images/lightbulb.svg" />
-    I<span class="white-outline"><a href="http://www.ntu.edu.sg" target="_blank">NTU</a></span>ITION<span class="white-outline">5.0</span></h1><br>
+    I<span class="white-outline"><a href="http://www.ntu.edu.sg" target="_blank">NTU</a></span>ITION<span class="white-outline">6.0</span></h1><br>
     <h5 class="sub-title animated fadeIn slow delay-3s">Calling all hackers and makers!</h5>
-    <h5 class="sub-sub-title animated fadeIn slower delay-4s">19-20<sup>th</sup> October 2019 @ NTU, Singapore.</h5>
-    <h5 class="sub-sub-title animated fadeIn slower delay-4s">The event is now over! <br>Check out the winning submissions below.</h5>
-    <a class="btn btn-outline-primary btn-lg animated fadeIn slower delay-5s" href="https://intuitionv5.devpost.com/submissions" target="_blank">DevPost Submissions</a>
+    <h5 class="sub-sub-title animated fadeIn slower delay-4s">19<sup>th</sup>-20<sup>th</sup> October 2019 @ NTU, Singapore.</h5>
+    <div id="countdown">
+  <div id='tiles'></div>
+  <div class="labels">
+    <li>Days</li>
+    <li>Hours</li>
+    <li>Mins</li>
+    <li>Secs</li>
+  </div>
+</div>
+    <a class="btn btn-outline-primary btn-lg animated fadeIn slower delay-5s" href="" target="_blank">Register Now!</a>
 
 
   </div>
   <script>
-    // Set the date we're counting down to
-    var countDownDate = new Date("October 13, 2018 11:00:00").getTime();
+   var target_date = new Date("October 19, 2019 11:00:00").getTime() ; // set the countdown date
+var days, hours, minutes, seconds; // variables for time units
 
-    // Update the count down every 1 second
-    var x = setInterval(function() {
+var countdown = document.getElementById("tiles"); // get tag element
 
-      // Get todays date and time
-      var now = new Date().getTime();
+getCountdown();
 
-      // Find the distance between now and the count down date
-      var distance = countDownDate - now;
+setInterval(function () { getCountdown(); }, 1000);
 
-      // Time calculations for days, hours, minutes and seconds
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+function getCountdown(){
 
-      // Display the result in the element with id="demo"
-      document.getElementById("demo sub-sub-title").innerHTML = "<span class='bordered'>" + days + "D</span> " + "<span class='bordered'>" + hours + "H</span> " +
-        "<span class='bordered'>" + minutes + "M</span> " + "<span class='bordered'>" + seconds + "S</span> ";
+	// find the amount of "seconds" between now and target
+	var current_date = new Date().getTime();
+	var seconds_left = (target_date - current_date) / 1000;
 
-      // If the count down is finished, write some text
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "Hackathon Begins!";
-      }
-    }, 1000);
+	days = pad( parseInt(seconds_left / 86400) );
+	seconds_left = seconds_left % 86400;
+		 
+	hours = pad( parseInt(seconds_left / 3600) );
+	seconds_left = seconds_left % 3600;
+		  
+	minutes = pad( parseInt(seconds_left / 60) );
+	seconds = pad( parseInt( seconds_left % 60 ) );
+
+	// format countdown string + set tag value
+	countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>"; 
+}
+
+function pad(n) {
+	return (n < 10 ? '0' : '') + n;
+}
+
   </script>
-
-
   <div class="container">
     <div class="col-12 faq" id="faq">
       <h1>Frequently Asked Questions</h1>
@@ -189,7 +322,7 @@
               <div class="table-responsive">
                 <table class="table">
                   <tr>
-                    <th colspan="3">Day 1 (19<sup>th</sup> October)</th>
+                    <th colspan="3">Day 1 (13<sup>th</sup> October)</th>
                   </tr>
                   <tr>
                     <td>1200</td>
@@ -222,7 +355,7 @@
               <div class="table-responsive">
                 <table class="table">
                   <tr>
-                    <th colspan="3">Day 2 (20 <sup>th</sup> October)</th>
+                    <th colspan="3">Day 2 (14 <sup>th</sup> October)</th>
                   </tr>
                   <tr>
                     <td>0600</td>
@@ -265,74 +398,87 @@
       <div class="col-lg-5 col-md-12 col-xs-10">
         <img src="app/images/ieee.png" / style="height:180px;">
       </div>
-
+      <div class="col-lg-5 col-md-12 col-xs-10">
+        <img src="app/images/oss.png" />
+      </div>
     </div>
   </div>
-
-
-
-  <div class="col-12 slideshow background-default" id="Photos">
-    <h1 class ="text-white" style="padding: 40px;">Photos of iNTUition 5.0</h1>
-    <img class="imgs centerBlock" src="app/images/1.jpg" >
-    <img class="imgs centerBlock" src="app/images/2.jpg" >
-    <img class="imgs centerBlock" src="app/images/3.jpeg" >
-    <img class="imgs centerBlock" src="app/images/4.jpeg" >
-    <img class="imgs centerBlock" src="app/images/5.jpg" >
-    <img class="imgs centerBlock" src="app/images/6.jpg" >
-    <img class="imgs centerBlock" src="app/images/7.jpeg" >
-    <img class="imgs centerBlock" src="app/images/8.jpeg" >
-    <img class="imgs centerBlock" src="app/images/9.jpeg" >
-    <img class="imgs centerBlock" src="app/images/10.jpeg" >
-    <img class="imgs centerBlock" src="app/images/11.jpg" >
-    <img class="imgs centerBlock" src="app/images/12.jpg" >
-    <div>
-      <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-      <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-      <button class="w3-button demo text-white spacing-bottom" onclick="currentDiv(1)">1</button> 
-      <button class="w3-button demo text-white spacing-bottom" onclick="currentDiv(2)">2</button> 
-      <button class="w3-button demo text-white spacing-bottom" onclick="currentDiv(3)">3</button>
-      <button class="w3-button demo text-white spacing-bottom" onclick="currentDiv(4)">4</button> 
-      <button class="w3-button demo text-white spacing-bottom" onclick="currentDiv(5)">5</button> 
-      <button class="w3-button demo text-white spacing-bottom" onclick="currentDiv(6)">6</button>
-      <button class="w3-button demo text-white spacing-bottom" onclick="currentDiv(7)">7</button> 
-      <button class="w3-button demo text-white spacing-bottom" onclick="currentDiv(8)">8</button> 
-      <button class="w3-button demo text-white spacing-bottom" onclick="currentDiv(9)">9</button>
-      <button class="w3-button demo text-white spacing-bottom" onclick="currentDiv(10)">10</button> 
-      <button class="w3-button demo text-white spacing-bottom" onclick="currentDiv(11)">11</button> 
-      <button class="w3-button demo text-white spacing-bottom" onclick="currentDiv(12)">12</button>
+  <div class="col-12 prizes" id="prizes">
+    <h1>Prizes</h1>
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-10 col-xs-10">
+        <h3>1<sup>st</sup> Place</h3>
+        <p>Sony PlayStation 4, <br>FIFA 19 Edition</p>
+      </div>
+      <div class="col-lg-4 col-md-10 col-xs-10">
+        <h3>2<sup>nd</sup> Place</h3>
+        <p>27 Inch Monitors</p>
+      </div>
+      <div class="col-lg-4 col-md-10 col-xs-10">
+        <h3>3<sup>rd</sup> Place</h3>
+        <p>Amazefit Pace Smartwatches</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-10 col-xs-10">
+        <h3>Best Financial Hack</h3>
+        <p>Beats Solo 3 <br>Wireless Headphones</p>
+      </div>
+      <div class="col-lg-4 col-md-10 col-xs-10">
+        <h3>Best Freshman Hack</h3>
+        <p>Razer Abyssus Elite Mice</p>
+      </div>
+      <div class="col-lg-4 col-md-10 col-xs-10">
+        <h3>Most Socially Useful or Environmental Friendly Hack</h3>
+        <p>Beats Solo 3 <br>Wireless Headphones</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-10 col-xs-10">
+        <h3>Best Hardware Hack</h3>
+        <p>Raspberry Pi Zero W <br>Complete Starter Kit</p>
+      </div>
+      <div class="col-lg-4 col-md-10 col-xs-10">
+        <h3>Best AI Hack</h3>
+        <p>Drones!</p>
+      </div>
+    </div>
   </div>
 </div>
 
-<script>
-  var slideIndex = 1;
-  showDivs(slideIndex);
-  
-  function plusDivs(n) {
-    showDivs(slideIndex += n);
-  }
-  
-  function currentDiv(n) {
-    showDivs(slideIndex = n);
-  }
-  
-  function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("imgs");
-    var dots = document.getElementsByClassName("demo");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" w3-white", "");
-    }
-    x[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " w3-white";
-  }
-  </script>
+  <div class="col-12 sponsors" id="sponsors">
+    <h1>Sponsors</h1>
+    <div class="row justify-content-center" style="margin-bottom:50px;">
 
-
+      <div class="col-md-10 col-xs-10 title">
+        <h3>Title Sponsors</h3>
+        <img src="app/images/PayPal.png" /><br><br>
+        <img src="app/images/Panalyt.jpg" />
+      </div>
+      <div class="col-md-12 col-xs-10 platinum" style="margin-bottom:40px;">
+        <h3>Platinum Sponsors</h3>
+        <img src="app/images/SeaGroup.png" />
+        <img src="app/images/ieee-sponsor.png" / style="padding-left:30px;"> <br>
+        <img src="app/images/Cognizant_Logo_Brand_Blue svg.svg" />
+      </div>
+      <div class="col-md-10 col-xs-10 gold">
+        <h3>Gold Sponsors</h3>
+        <img src="app/images/Blackrock.png" /> <img src="app/images/Manulife.png" />
+      </div>
+      <div class="col-md-10 col-xs-10 silver">
+        <h3>Silver Sponsor</h3>
+        <img src="app/images/Gradsingapore.png" />
+      </div>
+      <div class="col-md-10 col-xs-10 hardware">
+        <h3>Hardware Sponsor</h3>
+        <img src="app/images/12Geeks.png" />
+      </div>
+    </div>
+  </div>
+  <footer class="vertical-center">
+    <h5 class="footer-main">This hackathon is a joint collaboration by <a href="http://www.ntuoss.com" target="_blank">NTU Open Source Society</a> and <a href="http://www.ieeentu.com/" target="_blank">IEEE NTU</a>.</h5>
+    <h5>Made with <i class="fas fa-heart"></i> by <a href="http://www.github.com/kunmishra2599" target="_blank" >Kunal Mishra</a>.</h5>
+  </footer>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
