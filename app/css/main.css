@@ -115,7 +115,7 @@ body {
     body .jumbotron .sub-sub-sub-title {
       margin-top: 2%;
       padding: 5px;
-      font-size: 1em; }
+      font-size: 1.2em; }
     body .jumbotron .timer {
       color: white;
       font-weight: bold;
@@ -123,8 +123,8 @@ body {
       text-align: center; }
     body .jumbotron .bordered {
       background-color: #263238;
-      padding: 10px;
-      border-radius: 50px; }
+      padding: 20px;
+      border-radius: 100px; }
     body .jumbotron .three-cogs {
       position: relative;
       color: #263238; }
